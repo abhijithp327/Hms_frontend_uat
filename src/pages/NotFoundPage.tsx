@@ -1,8 +1,7 @@
 import { useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Home, ArrowLeft, AlertCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import {  AlertCircle } from "lucide-react";
+
 
 const NotFoundPage = () => {
   const location = useLocation();
