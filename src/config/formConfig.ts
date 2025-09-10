@@ -1,0 +1,566 @@
+import type { FormStepConfig } from '@/types/FormTypes';
+import { ClipboardCheck, ShieldQuestionMark, ShieldCheck, ShieldAlert, User, Hammer, Syringe, WavesLadder, BowArrow, RockingChair, Pipette, BookMinus, DraftingCompass, Drone, Shield, Wrench, Sailboat, Waves, Ship, Combine, FileText, Users, EqualApproximately, ShipWheel, AlertTriangle, SquareEqual, Briefcase, Proportions, Fish, Anchor, FoldVertical, MoveVertical, LifeBuoy } from 'lucide-react';
+
+
+export const formSteps: FormStepConfig[] = [
+    { id: 1, title: 'General Information', icon: User },
+    { id: 2, title: 'Dive Work Information', icon: Wrench },
+    { id: 3, title: 'Activity Log', icon: FileText },
+    { id: 4, title: 'Diving Team', icon: Users },
+    { id: 5, title: 'Facilities Deployed', icon: SquareEqual },
+    { id: 6, title: 'Scope Of Work', icon: Briefcase },
+    { id: 7, title: 'Report Sign Off', icon: Proportions },
+    { id: 8, title: 'Marine Growth Condition', icon: Fish },
+    { id: 9, title: 'Bow Area', icon: Anchor },
+    { id: 10, title: 'Port Vertical Side', icon: FoldVertical },
+    { id: 11, title: 'Stbd Vertical Side', icon: MoveVertical },
+    { id: 12, title: 'Flat Bottom', icon: LifeBuoy },
+    { id: 13, title: 'Bilge Keel', icon: Combine },
+    { id: 14, title: 'Stabilisers', icon: Ship },
+    { id: 15, title: 'Sea Chest Gradings', icon: Waves },
+    { id: 16, title: 'Sea Chest Internal', icon: Fish },
+    { id: 17, title: 'IICP / Cathodic Protection System', icon: EqualApproximately },
+    { id: 18, title: 'Bow Thruster', icon: Wrench },
+    { id: 19, title: 'Stern Thruster', icon: Proportions },
+    { id: 20, title: 'Propeller', icon: Drone },
+    { id: 21, title: 'Rope Guard', icon: Shield },
+    { id: 22, title: 'Rudder ', icon: ShipWheel },
+    { id: 23, title: 'Rudder SKEG', icon: Sailboat },
+    { id: 24, title: 'Discharge Pipes', icon: Pipette },
+    { id: 25, title: 'Sensors', icon: BookMinus },
+    { id: 26, title: 'Draft Marks', icon: DraftingCompass },
+    { id: 27, title: 'Docking Marks', icon: RockingChair },
+    { id: 28, title: 'Stern Arch', icon: BowArrow },
+    { id: 29, title: 'Above Waterline Areas', icon: WavesLadder },
+    { id: 30, title: 'Kort Nozzle', icon: Syringe },
+    { id: 31, title: 'Tail Shaft Readings', icon: Hammer },
+    { id: 32, title: 'Pintle Clearance Readings', icon: ShieldAlert },
+    { id: 33, title: 'Internal Report Verification', icon: ShieldCheck },
+    { id: 34, title: 'Surveyor Verification', icon: ShieldQuestionMark },
+    { id: 35, title: 'Points to Note', icon: AlertTriangle },
+    { id: 36, title: 'Complete Task', icon: ClipboardCheck },
+];
+
+export const initialFormData = {
+
+    generalInfo: {
+        jobNumber: 0,
+        date: '',
+        vesselPicture: '',
+        vesselName: '',
+        imoNumber: 0,
+        loa: 0,
+        width: 0,
+        client: '',
+        clientContactPerson: '',
+        agent: '',
+        agentContactPerson: '',
+        location: '',
+        distanceFromBase: 0,
+        bowDraft: 0,
+        midShipDraft: 0,
+        sternDraft: 0,
+    },
+
+    diveWorkInfo: {
+        maximumDivingDepth: 0,
+        underWaterVisibility: '',
+        seaWaterCurrent: '',
+    },
+
+    activityLog: {
+        activityStartDate: '',
+        onBoardDivingBoat: '',
+        completedLoadingToDivingBoat: '',
+        leftPort: '',
+        reachedAlongSideTheVessel: '',
+        sendTheDocumentsForDivingPermission: '',
+        receivedDocumentAfterSignAndStamp: '',
+        divingStartDate: '',
+        commencedDivingOperation: '',
+        divingEndDate: '',
+        completedDivingOperation: '',
+        sendDocumentAfterJobCompletionForSignAndStamp: '',
+        receivedDocumentsDutySignedAndStamp: '',
+        castOffFromTheVessel: '',
+        reachedPort: '',
+        activityEndDate: '',
+    },
+
+    divingTeam: {
+        divingSupervisor: '',
+        leadDriver: '',
+        stillCameraman: '',
+        videoCameraman: '',
+        tailShaftReadings: '',
+        pintleReadings: '',
+        standByDivers: '',
+        tenders: '',
+        brushKartCleaning: '',
+        marinaCleaning: '',
+        polishing: '',
+        scraping: '',
+        otherTaskAndRespectiveOperators: '',
+    },
+
+    facilitiesDeployed: {
+        divingBoat: '',
+        divingEquipmentUsed: [],
+    },
+
+    scopeOfWork: {
+        operationCarriedOut: [],
+        classOfSurvey: '',
+        attendingSurveyorName: '',
+        attendingSurveyorBusinessCardPicture: '',
+        attendingSurveyorSignature: '',
+        summaryRemarks: '',
+    },
+
+    reportSignOff: {
+        vesselRepresentativeName: '',
+        vesselRepresentativeDesignation: '',
+        stamp: '',
+    },
+
+    marineGrowthCondition: {
+        hullSections: [],
+        appurtenanceSections: [],
+        initialHullReport: '',
+    },
+
+    bowArea: {
+        portSideAreaOfTheBowLookingFwdBeforeCleaning: '',
+        keelPlateAreaOfTheBowLookingFwdBeforeCleaning: '',
+        stbdSideAreaOfTheBowLookingFwdBeforeCleaning: '',
+        portSideAreaOfTheBowLookingFwdAfterCleaning: '',
+        keelPlateAreaOfTheBowLookingFwdAfterCleaning: '',
+        stbdSideAreaOfTheBowLookingFwdAfterCleaning: '',
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        shellPlateCondition: '',
+        weldSeamCondition: '',
+        corrosion: '',
+        corrosionSeverity: '',
+        corrosionAreaAndDescription: '',
+        mechanicalDamage: '',
+        typeOfDamage: '',
+        remarks: '',
+    },
+
+    portVerticalSide: {
+        portVerticalSideNearToTheFwdAreaBeforeCleaning: [],
+        portVerticalSideNearToTheFwdAreaAfterCleaning: [],
+        portVerticalSideNearToTheMidAreaBeforeCleaning: [],
+        portVerticalSideNearToTheMidAreaAfterCleaning: [],
+        portVerticalSideNearToTheAftAreaBeforeCleaning: [],
+        portVerticalSideNearToTheAftAreaAfterCleaning: [],
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        shellPlateCondition: '',
+        weldSeamCondition: '',
+        corrosion: '',
+        corrosionSeverity: '',
+        corrosionAreaAndDescription: '',
+        mechanicalDamage: '',
+        typeOfDamage: '',
+        remarks: '',
+    },
+
+    stbdVerticalSide: {
+        stbdVerticalSideNearToTheFwdAreaBeforeCleaning: [],
+        stbdVerticalSideNearToTheFwdAreaAfterCleaning: [],
+        stbdVerticalSideNearToTheMidAreaBeforeCleaning: [],
+        stbdVerticalSideNearToTheMidAreaAfterCleaning: [],
+        stbdVerticalSideNearToTheAftAreaBeforeCleaning: [],
+        stbdVerticalSideNearToTheAftAreaAfterCleaning: [],
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        shellPlateCondition: '',
+        weldSeamCondition: '',
+        corrosion: '',
+        corrosionSeverity: '',
+        corrosionAreaAndDescription: '',
+        mechanicalDamage: '',
+        typeOfDamage: '',
+        remarks: '',
+    },
+
+    flatBottom: {
+        flatBottomSideNearToTheFwdAreaAfterCleaning: [],
+        flatBottomSideNearToTheFwdAreaBeforeCleaning: [],
+        flatBottomSideNearToTheMidAreaBeforeCleaning: [],
+        flatBottomSideNearToTheMidAreaAfterCleaning: [],
+        flatBottomSideNearToTheAftAreaBeforeCleaning: [],
+        flatBottomSideNearToTheAftAreaAfterCleaning: [],
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        shellPlateCondition: '',
+        weldSeamCondition: '',
+        corrosion: '',
+        corrosionSeverity: '',
+        corrosionAreaAndDescription: '',
+        groundingDamage: '',
+        plateIndentations: '',
+        drainPlugs: '',
+        navigationalAids: '',
+        dryDockMarksPresent: '',
+        dryDockMarksFouled: '',
+        dryDockMarksPainted: '',
+        bulbousBow: '',
+        bowCondition: '',
+        mechanicalDamage: '',
+        anchorChainLocation: '',
+        remarks: '',
+    },
+
+    bilgeKeel: {
+        leadingEdgeOfThePortSideBilgeKeelSectionPlateBeforeCleaning: '',
+        leadingEdgeOfThePortSideBilgeKeelSectionPlateAfterCleaning: '',
+        fullViewOfThePortSideBilgeKeelSectionPlateBeforeCleaning: '',
+        fullViewOfThePortSideBilgeKeelSectionPlateAfterCleaning: '',
+        trailingEdgeOfThePortSideBilgeKeelSectionPlateBeforeCleaning: '',
+        trailingEdgeOfThePortSideBilgeKeelSectionPlateAfterCleaning: '',
+        fullViewOfTheStbdSideBilgeKeelSectionPlateBeforeCleaning: '',
+        fullViewOfTheStbdSideBilgeKeelSectionPlateAfterCleaning: '',
+        leadingEdgeOfTheStbdSideBilgeKeelSectionPlateBeforeCleaning: '',
+        leadingEdgeOfTheStbdSideBilgeKeelSectionPlateAfterCleaning: '',
+        trailingEdgeOfTheStbdSideBilgeKeelSectionPlateBeforeCleaning: '',
+        trailingEdgeOfTheStbdSideBilgeKeelSectionPlateAfterCleaning: '',
+
+        numberOfSegments: 0,
+
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        weldSeamCondition: '',
+        corrosion: '',
+        corrosionSeverity: '',
+        corrosionAreaAndDescription: '',
+        mechanicalDamage: '',
+        presenceOfSacrificalAnodes: '',
+        typeOfDamage: '',
+        remarks: '',
+    },
+
+    stabilisers: {
+
+        beforeCleaning: [],
+        afterCleaning: [],
+        numberOfStabilisers: 0,
+        stabiliserLocation: '',
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        plateCondition: '',
+        weldSeam: '',
+        corrosion: '',
+        corrosionSeverity: '',
+        corrosionAreaAndDescription: '',
+        mechanicalDamage: '',
+        remarks: '',
+
+    },
+
+    seaChestGratings: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        generalCondition: '',
+        numberOfSeaChestGrids: 0,
+        connectionType: '',
+        boltMissing: '',
+        remarks: '',
+
+    },
+
+    seaChestInternal: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        generalCondition: '',
+        remarks: '',
+
+    },
+
+
+    iicpAndCathodicProtection: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        presenceOfSacrificialAnodes: '',
+        presenceOfImpressedCurrentAnodes: '',
+        remarks: '',
+
+    },
+
+
+    bowThrusters: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        numberOfBlades: 0,
+        bladePitch: '',
+        bladeCondition: '',
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        irregularities: [],
+        bossConeAndHubType: '',
+        condition: '',
+        mechanicalDamage: '',
+        remarks: '',
+        cementCoversIntact: '',
+        thrusterGridsCondition: '',
+        typeOfGridAssembly: '',
+    },
+
+
+    sternThruster: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        numberOfBlades: 0,
+        bladePitch: '',
+        bladeCondition: '',
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        irregularities: [],
+        bossConeAndHubType: '',
+        condition: '',
+        mechanicalDamage: '',
+        remarks: '',
+        cementCoversIntact: '',
+        thrusterGridsCondition: '',
+        typeOfGridAssembly: '',
+    },
+
+
+    propeller: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        numberOfPropellersAssembly: 0,
+        numberOfBlades: 0,
+        bladePitch: '',
+        bladeCondition: '',
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        irregularities: [],
+        bossConeAndHubType: '',
+        condition: '',
+        mechanicalDamage: '',
+        cementCoversIntact: '',
+        remarks: '',
+    },
+
+
+    ropeGuard: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        generalCondition: '',
+        plateAssembly: '',
+        mechanicalDamage: '',
+        corrosionVisible: '',
+        weldCondition: '',
+        ropeNetCable: '',
+        remarks: '',
+    },
+
+
+    rudder: {
+        portSideAreaOfTheRudderBeforeCleaning: '',
+        portSideAreaOfTheRudderAfterCleaning: '',
+        stbdSideAreaOfTheRudderBeforeCleaning: '',
+        stbdSideAreaOfTheRudderAfterCleaning: '',
+        noseAndSoleOfTheRudderBeforeCleaning: '',
+        noseAndSoleOfTheRudderAfterCleaning: '',
+        portSideAreaOfTheRudderCutoutBeforeCleaning: '',
+        portSideAreaOfTheRudderCutoutAfterCleaning: '',
+        stbdSideAreaOfTheRudderCutoutBeforeCleaning: '',
+        stbdSideAreaOfTheRudderCutoutAfterCleaning: '',
+        numberOfRudders: 0,
+        paintCondition: '',
+        paintDeterioration: [],
+        areaAffected: 0,
+        growthType: [],
+        thickness: '',
+        coverage: '',
+        severity: '',
+        generalCondition: '',
+        weldSeam: '',
+        corrosionVisible: '',
+        coverPlateAssembly: '',
+        coverPlateLocation: '',
+        coverPlateCondition: '',
+        mechanicalDamage: '',
+        remarks: ''
+    },
+
+
+    rudderSkeg: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        generalCondition: '',
+        weldSeam: '',
+    },
+
+
+    dischargePipes: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        growthCondition: '',
+        visualCondition: '',
+        paintCondition: '',
+    },
+
+
+    sensors: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        growthCondition: '',
+        visualCondition: '',
+        mechanicalDamage: '',
+    },
+
+
+    draftMarks: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        growthCondition: '',
+        visualCondition: '',
+        paintCondition: '',
+    },
+
+
+    dockingMarks: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        growthCondition: '',
+        visualCondition: '',
+        paintCondition: '',
+    },
+
+
+    sternArch: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        growthCondition: '',
+        visualCondition: '',
+        paintCondition: '',
+    },
+
+
+    aboveWaterlineAreas: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        growthCondition: '',
+        visualCondition: '',
+        paintCondition: '',
+    },
+
+
+    kortNozzle: {
+        beforeCleaning: [],
+        afterCleaning: [],
+        generalCondition: '',
+        plateAssembly: '',
+    },
+
+
+    tailShaftReadings: {
+        tailShaftReadingPicture: [],
+        wearDownReadingsTop: '',
+        wearDownReadingsBottom: '',
+        remarks: '',
+    },
+
+
+    pintleClearanceReadings: {
+        pintleClearanceReadingsPicture: [],
+        upperPintleClearanceReading: '',
+        lowerPintleClearanceReading: '',
+        remarks: '',
+    },
+
+
+    internalReportVerification: {
+        preparedBy: '',
+        preparedSignature: '',
+        verifiedBy: "Abhishek Sreekumar",
+        verifiedSignature: '',
+        approvedBy: "Capt. Ramneek. Singh",
+        approvedSignature: ''
+    },
+
+
+    surveyorVerification: {
+        approvedBy: '',
+        classOfSurvey: '',
+        approvedSignature: ''
+    },
+
+
+    pointsToNote: {
+        actualDraftInMeters: '',
+        overallFouling: '',
+        anyNightDivingDone: '',
+        entanglementRemovalDone: '',
+        actualDistanceOfVesselFromPortInNauticalMiles: '',
+        totalNumberOfSeaChestsGridsCleaned: '',
+        howManyMobilizationsWeDid: '',
+        anyStandByTimeReported: '',
+        anythingElseImportantToNote: '',
+    },
+
+    completeTask: {
+        email: '',
+    },
+
+
+};
