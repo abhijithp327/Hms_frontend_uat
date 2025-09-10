@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, useLocation } from "react-router-dom";
+import {  NavLink, useLocation } from "react-router-dom";
 import {
     X,
     Home,
@@ -10,7 +10,6 @@ import {
     Package,
     FileText,
     Calendar,
-    Mail,
     ChevronLeft,
     ChevronRight
 } from 'lucide-react';
