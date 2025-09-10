@@ -5,7 +5,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import type { FormData } from "@/types/FormTypes";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import MultipleImageUpload from "@/components/MultipleImageUploadSection";
-import { sternThrusterSchema } from "@/validationSchema/diver/sternThrusterSchema";
 import { propellerSchema } from "@/validationSchema/diver/propellerSchema";
 
 interface Props {

@@ -11,7 +11,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void
 }
 
-const SurveyorVerificationForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const SurveyorVerificationForm: React.FC<Props> = ({ data, onChange }) => {
 
     const [openSignature, setOpenSignature] = useState<boolean>(false);
 

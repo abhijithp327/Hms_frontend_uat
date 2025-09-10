@@ -11,7 +11,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void;
 }
 
-const RudderSkegForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const RudderSkegForm: React.FC<Props> = ({ data, onChange }) => {
 
    
 

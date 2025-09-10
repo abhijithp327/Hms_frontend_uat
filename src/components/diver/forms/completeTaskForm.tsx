@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Label } from '@/components/ui/label';
 import type { FormData } from '@/types/FormTypes';
 import { Input } from '@/components/ui/input';
-import AlertCustomModal from '@/components/AlertCustomModal';
+
 
 
 
@@ -12,9 +12,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void
 }
 
-const CompleteTaskForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
-
-    const [showSuccess, setShowSuccess] = React.useState<boolean>(false);
+const CompleteTaskForm: React.FC<Props> = ({ data, onChange }) => {
 
     const handleChange = (field: keyof FormData['completeTask'], value: string) => {
         onChange({ ...data, [field]: value });

@@ -14,8 +14,8 @@ const FormProgressBar: React.FC<Props> = ({ currentStep, totalSteps }) => {
     // Calculate which steps to show based on screen size
     const getVisibleSteps = () => {
         const mobileStepsToShow = 3; // Show 3 steps on mobile
-        const tabletStepsToShow = 4; // Show 4 steps on tablet
-        const desktopStepsToShow = 5; // Show 5 steps on desktop
+        // const tabletStepsToShow = 4; // Show 4 steps on tablet
+        // const desktopStepsToShow = 5; // Show 5 steps on desktop
         
         // Default to mobile logic, will be handled by CSS classes
         let stepsToShow = mobileStepsToShow;
@@ -75,7 +75,7 @@ const FormProgressBar: React.FC<Props> = ({ currentStep, totalSteps }) => {
 
                 {/* Visible steps */}
                 <div className="flex justify-between items-center flex-1 mx-2 sm:mx-4">
-                    {visibleSteps.map((step, index) => {
+                    {visibleSteps.map((step) => {
                         const isCompleted = step.actualIndex < currentStep;
                         const isCurrent = step.actualIndex === currentStep;
                         const IconComponent = step.icon;

@@ -12,7 +12,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void;
 }
 
-const DraftMarksForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const DraftMarksForm: React.FC<Props> = ({ data, onChange }) => {
 
 
 

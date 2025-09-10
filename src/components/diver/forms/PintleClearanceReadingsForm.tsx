@@ -13,7 +13,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void;
 }
 
-const PintleClearanceReadingsForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const PintleClearanceReadingsForm: React.FC<Props> = ({ data, onChange }) => {
 
 
 

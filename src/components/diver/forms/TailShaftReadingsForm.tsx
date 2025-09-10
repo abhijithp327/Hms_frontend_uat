@@ -13,7 +13,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void;
 }
 
-const TailShaftReadingsForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const TailShaftReadingsForm: React.FC<Props> = ({ data, onChange }) => {
 
 
 

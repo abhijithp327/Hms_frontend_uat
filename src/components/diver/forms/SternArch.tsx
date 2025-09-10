@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Label } from "@/components/ui/label";
 import type { FormData } from "@/types/FormTypes";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -12,7 +12,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void;
 }
 
-const SternArchForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const SternArchForm: React.FC<Props> = ({ data, onChange }) => {
 
 
 

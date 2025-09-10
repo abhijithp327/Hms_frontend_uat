@@ -11,7 +11,7 @@ interface Props {
     onValidationChange?: (isValid: boolean, errors: Record<string, string>) => void
 }
 
-const InternalReportVerificationForm: React.FC<Props> = ({ data, onChange, onValidationChange }) => {
+const InternalReportVerificationForm: React.FC<Props> = ({ data, onChange }) => {
 
     const [openSignatureField, setOpenSignatureField] = useState<"preparedSignature" | "verifiedSignature" | "approvedSignature" | null>(null);
 
